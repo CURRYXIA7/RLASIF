@@ -47,12 +47,12 @@ def main():
     torch.manual_seed(202407)
     np.random.seed(202407)
 
-    dataset_dir = '/home/wangkagn/桌面/RSSF/code/train80/set15'
-    lables_dir = 'output_labels'
-    dataset_dir_val = '/home/wangkagn/桌面/RSSF/code/val20/set15'
-    lables_dir_val = 'output_labels'
-    dataset_dir_test = ('/home/wangkagn/桌面/RSSF/code/test11/set15')
-    lables_dir_test = 'output_labels'
+    dataset_dir = ''
+    lables_dir = ''
+    dataset_dir_val = ''
+    lables_dir_val = ''
+    dataset_dir_test = ('')
+    lables_dir_test = ''
     # 构建数据集
     train_dataset, val_dataset, test_dataset = data.create_datasets(
         dataset_dir, lables_dir, dataset_dir_val, lables_dir_val, dataset_dir_test, lables_dir_test)
@@ -65,7 +65,7 @@ def main():
 
     save_train_loss = []
     save_Valid_loss = []
-    total_epochs = 25  # 设置学习轮次为25
+    total_epochs = 30  # 设置学习轮次为25
     best_model_path = 'models.pt'  # 最佳模型的保存路径
     for epoch in range(total_epochs):  # 开始循环训练
         # 学习率
