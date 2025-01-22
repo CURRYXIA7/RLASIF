@@ -43,10 +43,6 @@ def train(model, train_loader, optimizer):
 
 
 def main():
-    # 为了每次实验结果尽量一致，设置种子点
-    torch.manual_seed(202407)
-    np.random.seed(202407)
-
     dataset_dir = ''
     lables_dir = ''
     dataset_dir_val = ''
